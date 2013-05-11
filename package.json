@@ -1,0 +1,36 @@
+{
+  "name": "express-flash",
+  "description": "Flash variables for express 3.0",
+  "keywords": [
+    "express",
+    "flash"
+  ],
+  "author": {
+    "name": "Marco Godoy"
+  },
+  "version": "0.0.1",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/ghostnumber7/express-router/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "./lib/flash.js",
+  "bugs": "https://github.com/ghostnumber7/express-flash/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ghostnumber7/express-flash.git"
+  },
+  "devDependencies": {
+    "coffee-script": "*"
+  },
+  "readmeFilename": "README.md",
+  "_id": "express-flash@0.0.1",
+  "_from": "express-flash@"
+}
