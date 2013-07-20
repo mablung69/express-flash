@@ -1,4 +1,11 @@
-module.exports = (options)->    
+opt=
+    template:"<p class='{type}'>{message}</p>"
+
+module.exports = (options)->
+    
+    opt.container=options.container if options?.container?
+    opt.template=options.template if options?.template?
+    
     (req, res, next) ->
         req.flash = _flash
         res.locals.flash = _messages.bind req
@@ -22,12 +29,12 @@ _messages = (type) ->
     msgs = this.session.flash
     if !type?
         ((type, content)->
-            resp+="<p class='#{type}'>#{message}</p>" for message in content
+            resp+=opt.template.replace('{type}',type).replace('{message}',message) for message in content
         )(type,content) for type, content of msgs
         this.session.flash = {}
     else
         arr = msgs[type]
         delete msgs[type]
-        resp+="<p class='#{type}'>#{message}</p>" for message of arr
+        resp+=opt.template.replace('{type}',type).replace('{message}',message) for message of arr
 
     resp

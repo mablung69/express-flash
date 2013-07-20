@@ -8,7 +8,7 @@
   "author": {
     "name": "Marco Godoy"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "licenses": [
     {
       "type": "MIT",
@@ -27,10 +27,10 @@
     "type": "git",
     "url": "git://github.com/ghostnumber7/express-flash.git"
   },
-  "devDependencies": {
-    "coffee-script": "*"
-  },
   "readmeFilename": "README.md",
   "_id": "express-flash@0.0.1",
-  "_from": "express-flash@"
+  "_from": "express-flash@",
+  "dependencies": {
+    "coffee-script": "*"
+  }
 }
