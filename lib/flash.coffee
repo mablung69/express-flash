@@ -29,7 +29,7 @@ _messages = (type) ->
     msgs = this.session.flash
     if !type?
         ((type, content)->
-            resp+=opt.template.replace('{type}',type).replace('{message}',message) for message in content
+            resp+=opt.template.replace(new RegExp('\{type\}','g'),type).replace(new RegExp('\{message\}','g'),message) for message in content
         )(type,content) for type, content of msgs
         this.session.flash = {}
     else
